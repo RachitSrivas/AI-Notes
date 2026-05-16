@@ -1,9 +1,13 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+
 import SharedNote from './pages/SharedNote';
+import React from 'react'; // <-- Add this import
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+
 import Auth from './pages/Auth';
 import Workspace from './pages/Workspace';
 
-const PrivateRoute = ({ children }: { children: JSX.Element }) => {
+// Change JSX.Element to React.ReactNode
+const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
   const token = localStorage.getItem('peblo_token');
   return token ? children : <Navigate to="/auth" />;
 };
