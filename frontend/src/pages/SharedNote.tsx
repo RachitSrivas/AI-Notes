@@ -11,7 +11,7 @@ export default function SharedNote() {
 
 useEffect(() => {
   
-    axios.get(`https://ai-notes-3xh2.onrender.com/shared/${id}`)
+    axios.get(`https://ai-notes-jpve.onrender.com/shared/${id}`)
       .then(res => setNote(res.data))
       .catch(err => setError(err.response?.data?.error || 'Note not found'));
   }, [id]);
