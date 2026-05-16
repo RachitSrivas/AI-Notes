@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000',
+  baseURL: 'https://ai-notes-3xh2.onrender.com', 
 });
 
 api.interceptors.request.use((config) => {
